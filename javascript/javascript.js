@@ -7,26 +7,33 @@ input.setAttribute("type", "text");
 input.setAttribute("id", "userInput");
 document.body.appendChild(input);
 
-const userInputText = document.getElementById("userInput");
-userInputText.setAttribute("placeholder", "Enter your choice here");
+const button = document.createElement("button");
+button.innerText = "Enter";
+document.body.appendChild(button)
 
-function round(playerSelection, computerSelection) {
-    if (playerSelection === computerSelection) {
-        para.textContent = "It's a tie!";
-    } else if (playerSelection === "Rock" && computerSelection === "Paper") {
-        para.textContent = "You lose! Paper beats rock!";
-    } else if (playerSelection === "Paper" && computerSelection === "Scissors") {
-        para.textContent = "You lose! Scissors beats paper!";
-    } else if (playerSelection === "Scissors" && computerSelection === "Rock") {
-        para.textContent = "You lose! Rock beats scissors";
-    } else if (playerSelection === "Rock" && computerSelection === "Scissors") {
-        para.textContent = "You Win!";
-    } else if (playerSelection === "Paper" && computerSelection === "Rock") {
-        para.textContent = "You win!";
-    } else if (playerSelection === "Scissors" && computerSelection === "Paper") {
-        para.textContent = "You win!";
-    }
-}
+let playerSelection = document.getElementById("userInput").value.toLowerCase;
+
+console.log(playerSelection)
+
+document.getElementById("userInput").addEventListener("keypress", (event) => {
+    if (e.key === "Enter") {
+        function round(playerSelection, computerSelection) {
+            if (playerSelection === computerSelection) {
+                return "It's a tie!";
+            } else if (playerSelection === "rock" && computerSelection === "Paper") {
+                return "You lose! Paper beats rock!";
+            } else if (playerSelection === "paper" && computerSelection === "Scissors") {
+                return "You lose! Scissors beats paper!";
+            } else if (playerSelection === "scissors" && computerSelection === "Rock") {
+                return "You lose! Rock beats scissors";
+            } else if (playerSelection === "rock" && computerSelection === "Scissors") {
+                return "You Win!";
+            } else if (playerSelection === "paper" && computerSelection === "Rock") {
+                return "You win!";
+            } else if (playerSelection === "scissors" && computerSelection === "Paper") {
+                return "You win!";
+            }
+        }}});
 
 /*Random generator for computer choice*/
 
