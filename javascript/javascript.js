@@ -1,5 +1,9 @@
 console.log("Hello World!")
 
+const input = document.createElement("input");
+input.setAttribute("type", "text");
+document.body.appendChild(input);
+
 function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
