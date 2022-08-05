@@ -2,7 +2,13 @@ console.log("Hello World!")
 
 const input = document.createElement("input");
 input.setAttribute("type", "text");
+input.setAttribute("id", "userInput");
 document.body.appendChild(input);
+
+const userInputText = document.getElementById("userInput");
+userInputText.setAttribute("placeholder", "Enter your choice here");
+
+
 
 function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
