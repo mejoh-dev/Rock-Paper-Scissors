@@ -1,26 +1,23 @@
 console.log("Hello World!")
 
 function getRandomIntInclusive(min, max) {
-    min = Math.ceil(1);
-    max = Math.floor(3);
+    min = Math.ceil(min);
+    max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 function getComputerChoice() {
-    switch()
-        case 0:
-            console.log("Rock!");
-            break;
+    switch(getRandomIntInclusive(1,3)) {
         case 1:
-            console.log("Paper!");
+            return "Rock!";
             break;
         case 2:
-            console.log("Scissors!");
+            return "Paper!";
+            break;
+        case 3:
+            return "Scissors!";
             break;
         default:
-            console.log("Something went wrong...");
-
-
-
+            return "Something went wrong...";
+    }
 }
-console.log()
