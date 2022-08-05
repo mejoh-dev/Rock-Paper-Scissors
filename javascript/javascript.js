@@ -1,6 +1,11 @@
 console.log("Hello World!")
 
-function getRandomArbitrary
+function getRandomIntInclusive(min, max) {
+    min = Math.ceil(1);
+    max = Math.floor(3);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
 function getComputerChoice() {
     switch()
         case 0:
